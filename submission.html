@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submitting and reading data</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    /* Mobile First: Stack vertically with a 1rem gap */
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    form, #stage {
+      width: 100%;
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Desktop Viewport: Switch to side-by-side above 768px */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        gap: 2rem;
+        margin: 2rem auto;
+      }
+
+      form, #stage {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Form Side -->
+    <form id="data-form">
+      <div class="form-group">
+        <label for="input">Input:</label>
+        <input type="text" id="input" name="input">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Stage Side -->
+    <div id="stage">
+      <!-- Future submitted data will render here -->
+    </div>
+  </div>
+
+</body>
+</html>
