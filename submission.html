@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submitting and reading data</title>
+  <script src="./submission.js"></script>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -28,6 +29,10 @@
 
     .form-group {
       margin-bottom: 1rem;
+    }
+
+    .form-group.hp {
+      display: none;
     }
 
     label {
@@ -60,6 +65,31 @@
         flex: 1;
       }
     }
+
+    .submission-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .submission-item {
+      padding: 0.75rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submission-item:last-child {
+      border-bottom: none;
+    }
+
+    time {
+      font-size: 0.85rem;
+      color: #666;
+      font-family: monospace;
+    }
+
+    .submission-value {
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +100,10 @@
       <div class="form-group">
         <label for="input">Input:</label>
         <input type="text" id="input" name="input">
+      </div>
+      <div class="form-group hp">
+        <label for="first">First Name:</label>
+        <input type="text" id="first" name="first">
       </div>
       <button type="submit">Submit</button>
     </form>

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "FormSubmissions",
+  "description": "A collection of form submissions managed by the static web site application.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "timestamp",
+      "value"
+    ],
+    "properties": {
+      "timestamp": {
+        "type": "integer",
+        "description": "The epoch timestamp in seconds indicating when the form was submitted."
+      },
+      "value": {
+        "type": "string",
+        "description": "The exact string data submitted by the user from the form input field.",
+        "minLength": 1
+      }
+    },
+    "additionalProperties": false
+  }
+}
